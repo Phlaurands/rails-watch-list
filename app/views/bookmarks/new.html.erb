@@ -1,0 +1,6 @@
+<%= simple_form_for() do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :company %>
+  <%= f.association :roles %>
+  <%= f.button :submit %>
+<% end %>

@@ -16,9 +16,7 @@
 </div>
 
 <div class="container">
-  <div class="row" style="margin-top: 20px">
-    <div class="col-12 col-md-6 col-lg-3">
-      <div class="bg-white rounded p-3 shadow">
+      <div class="bg-white p-3 shadow center" style="margin-top: 20px">
         <h3>Add a movie to your <%= @list.name %> list</h3>
         <%= simple_form_for [@list, @bookmark] do |f| %>
           <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
@@ -26,6 +24,4 @@
           <%= f.submit class: 'btn form-actions' %>
         <% end %>
       </div>
-    </div>
-  </div>
 </div>

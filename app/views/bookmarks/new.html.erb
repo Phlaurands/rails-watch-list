@@ -1,7 +1,31 @@
-<div>
-  <%= simple_form_for(@bookmark) do |f| %>
-    <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
-    <%= f.association :movie, prompt: 'Select a movie' %>
-    <%= f.submit %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "http://pngimg.com/uploads/popcorn/popcorn_PNG21.png" %>
   <% end %>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "My list", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+         <%= link_to "New list", new_list_path, class: "nav-link" %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row" style="margin-top: 20px">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Add a movie to your <%= @list.name %> list</h3>
+        <%= simple_form_for [@list, @bookmark] do |f| %>
+          <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
+          <%= f.association :movie, prompt: 'Select a movie', input_html: { class: 'select2' } %>
+          <%= f.submit class: 'btn form-actions' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

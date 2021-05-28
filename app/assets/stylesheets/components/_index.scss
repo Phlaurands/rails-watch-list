@@ -2,3 +2,22 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+@import "banner";
+@import "button";
+@import "card";
+
+
+body {
+    background-color: #F4F4F4;
+
+    
+}
+
+.lists {
+    margin: 3rem auto;
+    padding: 3rem 2rem !important;
+    background-color: #fbfbfb;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
+}

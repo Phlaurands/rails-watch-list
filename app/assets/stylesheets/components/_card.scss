@@ -13,3 +13,32 @@
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
+
+  .card {
+    margin-top: 50px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+    .form-actions {
+        background-color: #1e8fffb7;
+        text-align: center;
+        border-radius: 10px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: max-content;
+          
+    }
+
+    .form-actions:hover {
+        background-color: #1e8fff;
+        color: white;
+    }
+  }

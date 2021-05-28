@@ -1,12 +1,33 @@
-<%= simple_form_for(@list) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "http://pngimg.com/uploads/popcorn/popcorn_PNG21.png" %>
+  <% end %>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "My list", "/" , class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+         <%= link_to "New list", new_list_path, class: "nav-link" %>
+      </li>
+    </ul>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+<div class="container">
+  <div class="card">
+    <%= simple_form_for(@list) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?%>
+
+      <div class="form-inputs">
+        <%= f.input :name, label: "Enter the list name"%>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
